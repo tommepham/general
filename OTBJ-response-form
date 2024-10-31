@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Form</title>
+  <style>
+    /* Custom CSS styling for the form */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+    .form-container h1 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .form-container label {
+      display: block;
+      margin-top: 10px;
+    }
+    .form-container input, .form-container textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    .form-container button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Submit Your Reflection</h1>
+    <form id="customForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="comments">Comments</label>
+      <textarea id="comments" name="comments" rows="4" required></textarea>
+      
+      <button type="submit">Submit</button>
+    </form>
+    <p id="responseMessage"></p>
+  </div>
+  
+  <script>
+    document.getElementById('customForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Google Apps Script Web App URL
+      const scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+      
+      // Form Data
+      const formData = new FormData(this);
+      
+      fetch(scriptURL, { method: 'POST', body: formData })
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('responseMessage').innerText = data;
+          document.getElementById('customForm').reset();
+        })
+        .catch(error => console.error('Error!', error.message));
+    });
+  </script>
+</body>
+</html>
