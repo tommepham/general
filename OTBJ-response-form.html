@@ -113,15 +113,18 @@
       const scriptURL = 'https://script.google.com/macros/s/AKfycbzsn7zehNl-4Br1pHcdaRO9pAgwb4Iudu_URil2m0H8uvxew-_CbuUjHeCRQYQFL86t/exec';
       
       // Form Data
-      const formData = new FormData(this);
-      
-      fetch(scriptURL, { method: 'POST', body: formData })
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('responseMessage').innerText = data;
-          document.getElementById('customForm').reset();
-        })
-        .catch(error => console.error('Error!', error.message));
+  const formData = new FormData(this);
+  
+  fetch(scriptURL, { method: 'POST', body: formData })
+    .then(response => response.text())
+    .then(data => {
+      console.log('Success:', data);  // Logs the response for debugging
+      document.getElementById('responseMessage').innerText = data;  // Display success message
+      document.getElementById('customForm').reset();  // Clear the form
+    })
+    .catch(error => {
+      console.error('Error!', error.message);  // Log any errors
+      document.getElementById('responseMessage').innerText = 'Submission failed. Please try again.';
     });
   </script>
 </body>
