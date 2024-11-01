@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Google Apps Script Form</title>
+</head>
+<body>
+  <h1>Submit Your Reflection</h1>
+  <form id="customForm" action="https://script.google.com/macros/s/AKfycbzsn7zehNl-4Br1pHcdaRO9pAgwb4Iudu_URil2m0H8uvxew-_CbuUjHeCRQYQFL86t/exec" method="POST">
+    <label>Favorite Moment:</label>
+    <input type="text" name="favoriteMoment"><br><br>
+
+    <label>Reflection:</label>
+    <textarea name="reflection"></textarea><br><br>
+
+    <label>Narrative:</label>
+    <textarea name="narrative"></textarea><br><br>
+
+    <label>Script Reflection:</label>
+    <textarea name="scriptReflection"></textarea><br><br>
+
+    <label>Final Musings:</label>
+    <textarea name="finalMusings"></textarea><br><br>
+
+    <label>Email:</label>
+    <input type="email" name="email"><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="responseMessage"></p>
+  
+  <script>
+    document.getElementById('customForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = document.getElementById('customForm');
+      const responseMessage = document.getElementById('responseMessage');
+      const formData = new FormData(form);
+
+      fetch(form.action, { method: 'POST', body: formData })
+        .then(response => response.text())
+        .then(data => {
+          responseMessage.innerText = data;
+          form.reset();
+        })
+        .catch(error => {
+          responseMessage.innerText = 'Submission failed. Please try again.';
+          console.error('Error!', error.message);
+        });
+    });
+  </script>
+</body>
+</html>
