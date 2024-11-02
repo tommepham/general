@@ -4,141 +4,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Customized Google Form</title>
-  <!-- Link to Google Fonts for Mulish -->
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-  font-family: 'Mulish', sans-serif;
-  background-color: #f5f5f5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+      font-family: 'Mulish', sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-.form-container {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-}
+    .form-container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+    }
 
-.form-container h1 {
-  font-size: 18px;
-  margin-bottom: 15px;
-  text-align: center;
-  color: #333333;
-}
+    .form-container h1 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      text-align: center;
+      color: #333333;
+    }
 
-.form-container label {
-  display: block;
-  margin-top: 10px;
-  font-weight: 600;
-  color: #333333;
-}
+    .form-container label {
+      display: block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #333333;
+    }
 
-.form-container input, .form-container textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-family: 'Mulish', sans-serif;
-}
+    .form-container input, .form-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-family: 'Mulish', sans-serif;
+    }
 
-.form-container button {
-  width: 100%;
-  padding: 10px;
-  background-color: #32de84;
-  border: none;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 15px;
-  font-family: 'Mulish', sans-serif;
-  font-weight: 600;
-}
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #32de84;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 15px;
+      font-family: 'Mulish', sans-serif;
+      font-weight: 600;
+    }
 
-.form-container button:hover {
-  background-color: #28b973;
-}
+    .form-container button:hover {
+      background-color: #28b973;
+    }
   </style>
 </head>
 <body>
   <div class="form-container">
     <h1>Submit Your Reflection</h1>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Customized Google Form</title>
-  <!-- Link to Google Fonts for Mulish -->
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-  font-family: 'Mulish', sans-serif;
-  background-color: #f5f5f5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.form-container {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-}
-
-.form-container h1 {
-  font-size: 18px;
-  margin-bottom: 15px;
-  text-align: center;
-  color: #333333;
-}
-
-.form-container label {
-  display: block;
-  margin-top: 10px;
-  font-weight: 600;
-  color: #333333;
-}
-
-.form-container input, .form-container textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-family: 'Mulish', sans-serif;
-}
-
-.form-container button {
-  width: 100%;
-  padding: 10px;
-  background-color: #32de84;
-  border: none;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 15px;
-  font-family: 'Mulish', sans-serif;
-  font-weight: 600;
-}
-
-.form-container button:hover {
-  background-color: #28b973;
-}
-  </style>
-</head>
-<body>
-  <div class="form-container">
-    <h1>Submit Your Reflection</h1>
-    <form action="https://hook.us2.make.com/z1nvs594dfyjqpj2fayoa2qfnvodl6c7" method="POST">
+    <form id="customForm" action="https://hook.us2.make.com/z1nvs594dfyjqpj2fayoa2qfnvodl6c7" method="POST">
       <!-- Favorite Moment -->
       <label for="favoriteMoment">Favourite moment?</label>
       <input type="text" id="favoriteMoment" name="favoriteMoment">
@@ -148,21 +77,15 @@
       <textarea id="reflection" name="reflection" rows="4"></textarea>
 
       <!-- Crafting a New Narrative -->
-      <label for="narrative">"He's crafting a new narrative."<br>
-        Imagining Jesus at work in this scene invites us to think about how we might be invited to carve out a different future.<br><br>
-        In what way do you feel invited by God to carve out a different future? What story do you want to write?
-      </label>
+      <label for="narrative">In what way do you feel invited by God to carve out a different future?</label>
       <textarea id="narrative" name="narrative" rows="4"></textarea>
 
       <!-- Writing Our Own Script -->
-      <label for="scriptReflection">Tom emphasised "writing our own script." An equally helpful way to put it could be to ask this:<br>
-        "What does it mean to live by God’s script, rather than your own?"<br><br>
-        Both of these ideas are present in this scene. What about for you, what do you think?
-      </label>
+      <label for="scriptReflection">What does it mean to live by God’s script, rather than your own?</label>
       <textarea id="scriptReflection" name="scriptReflection" rows="4"></textarea>
 
       <!-- Final Musings -->
-      <label for="finalMusings">Got any final musings or takeaways?</label>
+      <label for="finalMusings">Any final musings or takeaways?</label>
       <textarea id="finalMusings" name="finalMusings" rows="4"></textarea>
 
       <!-- Email Address -->
@@ -178,84 +101,18 @@
   <script>
     document.getElementById('customForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      
-      // Google Apps Script Web App URL
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbzsn7zehNl-4Br1pHcdaRO9pAgwb4Iudu_URil2m0H8uvxew-_CbuUjHeCRQYQFL86t/exec';
-      
-      // Form Data
-  const formData = new FormData(this);
-  
-  fetch(scriptURL, { method: 'POST', body: formData })
-    .then(response => response.text())
-    .then(data => {
-      console.log('Success:', data);  // Logs the response for debugging
-      document.getElementById('responseMessage').innerText = data;  // Display success message
-      document.getElementById('customForm').reset();  // Clear the form
-    })
-    .catch(error => {
-      console.error('Error!', error.message);  // Log any errors
-      document.getElementById('responseMessage').innerText = 'Submission failed. Please try again.';
-    });
-  </script>
-</body>
-</html>
+      const scriptURL = 'https://hook.us2.make.com/z1nvs594dfyjqpj2fayoa2qfnvodl6c7';
+      const formData = new FormData(this);
 
-      <!-- Favorite Moment -->
-      <label for="favoriteMoment">Favourite moment?</label>
-      <input type="text" id="favoriteMoment" name="favoriteMoment">
-
-      <!-- What grabbed you -->
-      <label for="reflection">What grabbed you, what sticks with you, what questions do you have?</label>
-      <textarea id="reflection" name="reflection" rows="4"></textarea>
-
-      <!-- Crafting a New Narrative -->
-      <label for="narrative">"He's crafting a new narrative."<br>
-        Imagining Jesus at work in this scene invites us to think about how we might be invited to carve out a different future.<br><br>
-        In what way do you feel invited by God to carve out a different future? What story do you want to write?
-      </label>
-      <textarea id="narrative" name="narrative" rows="4"></textarea>
-
-      <!-- Writing Our Own Script -->
-      <label for="scriptReflection">Tom emphasised "writing our own script." An equally helpful way to put it could be to ask this:<br>
-        "What does it mean to live by God’s script, rather than your own?"<br><br>
-        Both of these ideas are present in this scene. What about for you, what do you think?
-      </label>
-      <textarea id="scriptReflection" name="scriptReflection" rows="4"></textarea>
-
-      <!-- Final Musings -->
-      <label for="finalMusings">Got any final musings or takeaways?</label>
-      <textarea id="finalMusings" name="finalMusings" rows="4"></textarea>
-
-      <!-- Email Address -->
-      <label for="email">Your email</label>
-      <input type="email" id="email" name="email">
-
-      <!-- Submit Button -->
-      <button type="submit">Submit</button>
-    </form>
-    <p id="responseMessage"></p>
-  </div>
-
-  <script>
-    document.getElementById('customForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Google Apps Script Web App URL
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbzsn7zehNl-4Br1pHcdaRO9pAgwb4Iudu_URil2m0H8uvxew-_CbuUjHeCRQYQFL86t/exec';
-      
-      // Form Data
-  const formData = new FormData(this);
-  
-  fetch(scriptURL, { method: 'POST', body: formData })
-    .then(response => response.text())
-    .then(data => {
-      console.log('Success:', data);  // Logs the response for debugging
-      document.getElementById('responseMessage').innerText = data;  // Display success message
-      document.getElementById('customForm').reset();  // Clear the form
-    })
-    .catch(error => {
-      console.error('Error!', error.message);  // Log any errors
-      document.getElementById('responseMessage').innerText = 'Submission failed. Please try again.';
+      fetch(scriptURL, { method: 'POST', body: formData })
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('responseMessage').innerText = "Submitted successfully!";
+          this.reset();
+        })
+        .catch(error => {
+          document.getElementById('responseMessage').innerText = 'Submission failed. Please try again.';
+        });
     });
   </script>
 </body>
